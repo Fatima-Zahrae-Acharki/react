@@ -11,6 +11,7 @@ class Counter extends Component {
     }
     increment(){
         //with state: it won't work in the jsx but will appear in console
+        
         // this.state.count = this.state.count + 1
         // console.log(this.state.count)
 

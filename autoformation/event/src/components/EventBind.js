@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react'    
 
 class EventBind extends Component {
 //state property
@@ -27,9 +27,10 @@ class EventBind extends Component {
     //class property as arrow function 4
     clickHandler = () =>{
         this.setState({
-            message:'die'
+            message:'his name is john cenna '
         })
     }
+  
 
   render() {
     return (
@@ -37,6 +38,8 @@ class EventBind extends Component {
         <div>{this.state.message}</div>
         {/* binding in render 1*/}
         {/* <button onClick={this.clickHandler.bind(this)} >CLICK</button> */}
+        
+
         {/* using arrow functions in render 2*/}
         <button onClick={()=> this.clickHandler()} >CLICK</button>
         {/* deals with biding the event handler in the constructor */}
@@ -46,4 +49,4 @@ class EventBind extends Component {
   }
 }
 
-export default EventBind
+export default EventBind    

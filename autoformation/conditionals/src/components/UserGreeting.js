@@ -1,21 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { Component } from 'react'
 
-function MissedGoal() {
-	return <h1>MISSED!</h1>;
-}
 
-function MadeGoal() {
-	return <h1>GOAL!</h1>;
-}
+class UserGreeting extends Component {
 
-function Goal(props) {
-  const isGoal = props.isGoal;
-  if (isGoal) {
-    return <MadeGoal/>;
+
+    //if else
+    //jsx inside if else
+
+    constructor(props) {
+    super(props)
+  
+    this.state = {
+       isLoggedIn:false //will return welcome guest
+    //    isLoggedIn:true  //will return welcome kirby
+    }
   }
-  return <MissedGoal/>;
+  render() {
+
+        //////////////normal condition
+
+        // if(this.state.isLoggedIn){
+        //     return(
+        //         <div>welcome kirby</div>
+        //     )
+        // } else{
+        //     return(
+        //         <div>welcome guest</div>
+        //     )
+        // }
+
+
+    return (
+      <div>
+        <div>welcome kirby</div>
+        <div>welcome guest</div>
+      </div>
+      
+    )
+
+
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Goal isGoal={false} />);
+export default UserGreeting

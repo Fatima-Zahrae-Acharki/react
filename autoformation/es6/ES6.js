@@ -68,7 +68,7 @@ let show = true
 // map array method example 
 
 const array1 = people.map((event) =>  <li>{event}</li>)  //map: take an argument (loop the objects in array)
-//forEach(event => {event});
+//forEach(event => {event}); //map(): creates a new array with the result of calling a provided function on every element in the calling array
 
 
 

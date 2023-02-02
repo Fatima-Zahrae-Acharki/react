@@ -43,7 +43,13 @@ function NameList() {
     //    <HeroList key = "unique" hero={hero} ></HeroList>        //unique: every item rendered will have the same value for the key problem
     //    <HeroList key = {hero.id} hero={hero} ></HeroList>       //id is unique key prop value
        <HeroList key = {hero.ability} hero={hero} ></HeroList>         //the keeper of value don't need to be id all the time, it can be anything as long as its a unique within the list
+
+
+       //index as key anti pattern
     )
+
+
+
 
   return (
     <div>
@@ -67,7 +73,11 @@ function NameList() {
 
 
 
-        {/* lists and keys */}
+        {/* lists and keys : same as 3*/}
+
+
+
+
 
     </div>
   )

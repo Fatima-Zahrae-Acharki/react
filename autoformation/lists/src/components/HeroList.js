@@ -1,12 +1,12 @@
 import React from 'react'
 
-function HeroList({hero, key}) {
+function HeroList({hero},{ability}) {
   return (
     <div>
         <h2>
-            {key}<b><u>hero name</u> :</b> {hero.name},
-            <b><u>his age</u> : </b>{hero.age} YO,
-            <b><u>his ability</u> : </b>{hero.ability}
+            {ability}<b><u>hero name</u> :</b> {hero.name},
+            <b> <u> his age</u> : </b>{hero.age} YO,
+            <b> <u> his ability</u> : </b>{hero.ability}
         </h2> 
         
     </div>

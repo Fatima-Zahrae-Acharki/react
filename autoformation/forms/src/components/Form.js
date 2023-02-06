@@ -6,23 +6,59 @@ class Form extends Component {
       super(props)
     
       this.state = {
-         username: ''
+         username: '',
+         comments: '',
+         topic: 'react'
       }
     }
     
-    handleUsernameChange = (event) => {
+    handleUsernameChange = event => {
         this.setState({
             username: event.target.value
         })
+    }//event = argument
+    handleCommentsChange = event => {
+        this.setState({
+            comments: event.target.value
+        })
+    }
+    handleTopicChange = event => {
+        this.setState({
+            topic: event.target.value
+        })
+    }
+    handleSubmit = event => {
+        alert(`${this.state.username} ${this.state.comments} ${this.state.topic}`)
+        event.preventDefault() //prevent default ehaviour of form submition   /  prevent page from refresh
     }
 
   render() {
+    //to clean up the code (destructing)
+    // const { username, comments, topic} = this.state  // u can delete this.state from the values
     return (
-      <form>
+      <form onSubmit={this.handleSubmit} >
         <div>
-            <label>Username</label>
+            <label>Username  </label>
             <input type='text' value={this.state.username} onChange={this.handleUsernameChange} ></input>
         </div>
+        <br/>
+        {/* textarea */}
+        <div>
+            <label>Comments </label>
+            <textarea value={this.state.comments} onChange={this.handleCommentsChange} ></textarea>
+        </div>
+        <br/>
+        {/* dropdown */}
+        <div>
+            <label>Topics </label>
+            <select value={this.state.topic} onChange={this.handleTopicChange} >
+                <option value='react' > React </option>
+                <option value='angular' > Angular </option>
+                <option value='vue' > Vue </option>
+            </select>
+        </div>
+        <br/>
+        <button type='submit'>Submit</button>
       </form>
     )
   }
